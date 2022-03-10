@@ -1,0 +1,36 @@
+App
+⁃ Wave image
+⁃ Light blue background
+	
+	Card
+	⁃ Rounded corners
+	⁃ Box shadow
+	⁃ Header image?
+
+		OrderSummaryHeader?
+
+		OrderSummary
+		⁃ Header image?
+		⁃ Title
+		⁃ Black text
+		⁃ Text
+		⁃ Grey text
+
+			OrderSummaryForm
+			⁃ Select product
+				⁃ Show current plan
+				⁃ Link to change plan
+					⁃ Active state: no underline, paler
+				⁃ Darker Background
+				⁃ Rounded corners
+
+			⁃ Submit button
+				⁃ Blue button
+				⁃ White text
+				⁃ Box shadow
+				⁃ Rounded corners
+				⁃ Active state: Lighter
+
+			⁃ Cancel order link
+				⁃ Grey text
+				⁃ Active state: Darker
