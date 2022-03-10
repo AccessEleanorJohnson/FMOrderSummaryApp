@@ -1,0 +1,22 @@
+.order-summary {
+    text-align: center;
+}
+
+.order-summary__header {
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+}
+
+.order-summary__title {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.order-summary__text {
+    margin: 0 auto;
+    padding: 5px;
+    max-width: 70%;
+    color: grey;
+    line-height: 1.6;
+}
