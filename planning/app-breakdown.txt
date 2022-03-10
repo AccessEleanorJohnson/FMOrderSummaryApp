@@ -17,7 +17,7 @@ App
 		⁃ Grey text
 
 			OrderSummaryForm
-			⁃ Select product
+			⁃ Select product   ??? Own component?
 				⁃ Show current plan
 				⁃ Link to change plan
 					⁃ Active state: no underline, paler
@@ -34,3 +34,18 @@ App
 			⁃ Cancel order link
 				⁃ Grey text
 				⁃ Active state: Darker
+
+
+
+			Potential SelectProduct component:
+			? - Take customer to a separate page
+			  - customer sees cards with the plan options
+			  - they click what they want
+			  - they return to the order summary screen with that plan in the 'Select product' block
+
+			? - The customer stays on the same page
+			  - the 'Select product' block opens like a selector menu
+			  - this menu contains all the plans in a similar format to the 'Annual Plan' already in
+				 the block on the design image
+			  - when they click the plan they want the selector menu collapses and the selected plan
+				 is displayed
