@@ -8,7 +8,7 @@ function OrderSummary (props) {
         <div className='order-summary'>
             <img className='order-summary__header' src={header} />
             <h2 className='order-summary__title'>Order Summary</h2>
-            <p className='order-summary__text'>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhaere you like!</p>
+            <p className='order-summary__text'>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
 
         </div>
     );
