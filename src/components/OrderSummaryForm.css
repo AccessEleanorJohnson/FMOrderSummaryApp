@@ -1,0 +1,33 @@
+.order-summary-form {
+    padding: 20px 30px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-summary-form__button {
+    display: block;
+    margin-bottom: 20px;
+    padding: 20px 5px;
+    color: white;
+    font-weight: bold;
+    background-color: hsl(245, 75%, 52%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px hsla(245, 75%, 52%, 0.3);
+}
+.order-summary-form__button--active:hover {
+    background-color: hsla(245, 75%, 52%, .8);
+    cursor: pointer;
+}
+.order-summary-form__cancel {
+    padding: 5px;
+    display: block;
+    color: gray;
+    font-weight: bold;
+    text-decoration: none;
+}
+.order-summary-form__cancel--active:hover {
+    color: black;
+    text-decoration: underline;
+}

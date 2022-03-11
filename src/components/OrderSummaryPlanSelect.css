@@ -1,0 +1,32 @@
+.plan-selector {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 20px;
+}
+
+.plan-selector__icon {
+    display: inline;
+}
+
+.plan-selector__title {
+    
+}
+
+.plan-selector__price {
+    color: grey;
+}
+
+.plan-selector__change {
+    color: hsl(245, 75%, 52%);
+    font-weight: bold;
+}
+
+.plan-selector__change:hover {
+    color: hsla(245, 75%, 52%, 0.8);
+}
