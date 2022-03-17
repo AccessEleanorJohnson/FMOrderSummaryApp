@@ -1,7 +1,5 @@
-import './Card.css';
-
 function Card (props) {
-    const classes = 'card ' + props.className;
+    const classes = 'rounded-3xl shadow-2xl shadow-desaturated-blue/50 ' + props.className;
 
     return (
         <div className={classes}>

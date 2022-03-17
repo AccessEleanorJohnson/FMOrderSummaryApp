@@ -1,15 +1,13 @@
 import OrderSummaryPlanSelect from './OrderSummaryPlanSelect';
 
-import './OrderSummaryForm.css';
-
 function OrderSummaryForm() {
 
     return (
-        <div className='order-summary-form'>
+        <form className='pb-6 flex flex-col'>
             <OrderSummaryPlanSelect />
-            <button className='order-summary-form__button order-summary-form__button--active'>Proceed to Payment</button>
-            <a className='order-summary-form__cancel order-summary-form__cancel--active' href='#'>Cancel Order</a>
-        </div>
+            <button className='block my-5 py-4 text-white font-bold bg-bright-blue hover:bg-bright-blue/80 rounded-xl shadow-xl shadow-bright-blue/20'>Proceed to Payment</button>
+            <a className='p-2 text-desaturated-blue hover:text-black text-sm font-bold hover:underline' href='#'>Cancel Order</a>
+        </form>
     );
 }
 

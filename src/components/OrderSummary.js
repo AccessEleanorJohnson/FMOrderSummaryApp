@@ -1,18 +1,19 @@
 import OrderSummaryForm from './OrderSummaryForm';
-import './OrderSummary.css';
 import header from '../images/illustration-hero.svg';
 
-function OrderSummary (props) {
+function OrderSummary () {
 
     return (
-        <div className='order-summary'>
-            <img className='order-summary__header' src={header} alt='Girl dancing to music' />
-            <h2 className='order-summary__title'>Order Summary</h2>
-            <p className='order-summary__text'>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+        <>
+            <img className='rounded-t-3xl' src={header} alt='' />
+            <div className='text-center p-6 xxs:p-8 sm:p-9'>
+                <h1 className='text-2xl font-bold py-5'>Order Summary</h1>
+                <p className='text-desaturated-blue sm:px-6'>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
 
-            <OrderSummaryForm />
+                <OrderSummaryForm />
 
-        </div>
+            </div>
+        </>
     );
 
 }

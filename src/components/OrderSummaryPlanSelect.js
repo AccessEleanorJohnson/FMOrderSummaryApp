@@ -1,16 +1,17 @@
 import icon from '../images/icon-music.svg';
-import './OrderSummaryPlanSelect.css';
 
 function OrderSummaryPlanSelect () {
 
     return (
-        <div className='plan-selector'>
-            <img className='plan-selector__icon' src={icon} />
-            <div>
-                <h3 className='plan-selector__title'>Annual Plan</h3>
-                <p className='plan-selector__price'>$59.99/year</p>
-            </div>
-            <a className='plan-selector__change' href='#'>Change</a>
+        <div className='my-4 py-4 bg-very-pale-blue rounded-xl flex justify-around items-center' id='plan-selector'>
+            <div className='flex items-center'>
+                <img className='pr-4' src={icon} alt='' />
+                <div className=''>
+                    <h3 className='font-bold p-1'>Annual Plan</h3>
+                    <p className='text-desaturated-blue'>$59.99/year</p>
+                </div>
+            </div>    
+            <a className='text-bright-blue hover:text-bright-blue/80 underline hover:no-underline font-bold' href='#'>Change</a>
         </div>
     );
 }
