@@ -1,12 +1,11 @@
-import { useState, useRef } from 'react';
-
+import { useState } from 'react';
 import DurationMenu from './DurationMenu';
 
 import icon from '../images/icon-music.svg';
-import React from 'react';
 
 function OrderSummaryPlanSelect () {
 
+    // Tempary test data to test functionality on this component and DurationMenu
     const planOptions = [
         {
             duration: 'Annual',
@@ -20,17 +19,19 @@ function OrderSummaryPlanSelect () {
     const [displayDurationMenu, setDisplayDurationMenu] = useState(false);
     const [selectedOption, setSelectedOption] = useState(0);
 
+    // Switches from displaying the selected option to displaying the DurationMenu
     const onClickHandler = (e) => {
         e.preventDefault();
-        console.log('click');
         toggleDurationMenu();
     }
 
+    // Handler takes 'duration' property passed up from DurationMenu and makes it the selected option
     const onSelectHandler = (selected) => {
         toggleDurationMenu();
         setSelectedOption(selected === 'Annual' ? 0 : 1);
     }
 
+    // Toggle function shared by handlers
     const toggleDurationMenu = () => {
         setDisplayDurationMenu(!displayDurationMenu);
     }

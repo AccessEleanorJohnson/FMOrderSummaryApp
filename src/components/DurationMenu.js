@@ -1,27 +1,27 @@
 import { useState } from 'react';
 
 function DurationMenu (props) {
+
+    // For making a visable focus since the radio is hidden
     const [focusOn, setFocusOn] = useState('');
+    const onFocus = (e) => {
+        setFocusOn(`${e.target.value}`)
+    }
+
+    // Remove focus styling from radios when focus moves to button
+    const onBlur = () => {
+        setFocusOn('');
+    }
+
+    //Send selected value up to calling component
+    const onClick = (e) => {
+        props.onSelect(e.target.attributes.for.value);
+    }
 
     const durationToTimeSpan = (duration) => {
         return duration === 'Annual' ? 'year' : 'month';
     }
 
-    const onClick = (e) => {
-        console.log(e);
-        props.onSelect(e.target.attributes.for.value);
-    }
-
-    // Create a visable focus since the radio that is actually focused in hidden
-    const onFocus = (e) => {
-        // console.log(e.target.value)
-        setFocusOn(`${e.target.value}`)
-    }
-
-    const onBlur = () => {
-        setFocusOn('');
-    }
-    
     return (
         <div className='flex flex-col items-center xxs:flex-row m-4'>
             {props.options.map(option => {
@@ -30,7 +30,7 @@ function DurationMenu (props) {
 
                         <label htmlFor={option.duration}
                         onClick={onClick}
-                        className='block cursor-pointer underline text-desaturated-blue hover:text-bright-blue/80 hover:font-extrabold font-bold first-line:text-bright-blue hover:firstline:text-bright-blue/80 first-line:underline'>
+                        className='block cursor-pointer underline text-desaturated-blue hover:text-bright-blue/80 hover:font-extrabold font-bold first-line:text-bright-blue first-line:underline'>
                             {/* Content of the label */}
                             {`${option.duration}`}
                             <br />
