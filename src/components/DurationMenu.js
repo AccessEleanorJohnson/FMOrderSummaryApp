@@ -14,7 +14,7 @@ function DurationMenu (props) {
         <div className='flex flex-col items-center xxs:flex-row m-4'>
             {props.options.map(option => {
                 return (
-                    <div key={option.duration} className='inline relative m-1 p-4 w-full xxs:w-1/2 bg-very-pale-blue rounded-xl'>
+                    <div className='inline relative m-1 p-4 w-full xxs:w-1/2 bg-very-pale-blue rounded-xl'>
 
                         <label htmlFor={option.duration} 
                         
