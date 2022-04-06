@@ -2,7 +2,7 @@ function DurationMenu (props) {
 
     //Send selected value up to calling component
     const onClick = (e) => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         props.onSelect(e.target.value);
     }
 
