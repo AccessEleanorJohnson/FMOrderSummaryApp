@@ -1,7 +1,7 @@
 function DurationMenu (props) {
 
     //Send selected value up to calling component
-    const onChange = (e) => {
+    const onClick = (e) => {
         console.log(e.target.value);
         props.onSelect(e.target.value);
     }
@@ -26,7 +26,7 @@ function DurationMenu (props) {
                         </label>
 
                         {/* Hidden checkbox input */}
-                        <input type='checkbox' id={option.duration} name='duration' value={option.duration} onChange={onChange} className='appearance-none absolute h-full w-full top-0 left-0 z-10 rounded-xl cursor-pointer hover:border hover:border-bright-blue hover:border-4' />
+                        <input type='checkbox' id={option.duration} name='duration' value={option.duration} onClick={onClick} className='appearance-none absolute h-full w-full top-0 left-0 z-10 rounded-xl cursor-pointer hover:border hover:border-bright-blue hover:border-4' />
                     </div>
                 );
             })}
