@@ -28,7 +28,8 @@ function OrderSummaryPlanSelect () {
     // Handler takes 'duration' property passed up from DurationMenu and makes it the selected option
     const onSelectHandler = (selected) => {
         toggleDurationMenu();
-        setSelectedOption(selected === 'Annual' ? 0 : 1);
+        const option = (selected === 'Annual' ? 0 : 1);
+        setSelectedOption(option);
     }
 
     // Toggle function shared by handlers
@@ -48,9 +49,9 @@ function OrderSummaryPlanSelect () {
                 <div className='my-4 py-4 bg-very-pale-blue rounded-xl flex justify-around items-center' id='plan-selector'>
                     <div className='flex items-center'>
                         <img className='pr-4' src={icon} alt='' />
-                        <div className=''>
+                        <div>
                             <h3 className='font-bold p-1'>{planOptions[selectedOption].duration} Plan</h3>
-                            <p className='text-desaturated-blue'>${`${planOptions[selectedOption].price}/${durationToTimeSpan(planOptions[selectedOption].duration)}`}</p>
+                            <p className='text-desaturated-blue'>{`$${planOptions[selectedOption].price}/${durationToTimeSpan(planOptions[selectedOption].duration)}`}</p>
                         </div>
                     </div>    
                     <button className='text-bright-blue hover:text-bright-blue/80 underline hover:no-underline font-bold' onClick={onClickHandler} >Change</button>
