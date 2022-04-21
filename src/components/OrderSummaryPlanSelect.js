@@ -3,19 +3,9 @@ import DurationMenu from './DurationMenu';
 
 import icon from '../images/icon-music.svg';
 
-function OrderSummaryPlanSelect () {
+function OrderSummaryPlanSelect (props) {
 
-    // Tempary test data to test functionality on this component and DurationMenu
-    const planOptions = [
-        {
-            duration: 'Annual',
-            price: 59.99
-        },
-        {
-            duration: 'Monthly',
-            price: 6
-        },
-    ];
+    const planOptions = props.planOptions;
     const [displayDurationMenu, setDisplayDurationMenu] = useState(false);
     const [selectedOption, setSelectedOption] = useState(0);
 
@@ -30,6 +20,7 @@ function OrderSummaryPlanSelect () {
         toggleDurationMenu();
         const option = (selected === 'Annual' ? 0 : 1);
         setSelectedOption(option);
+        props.onPlanSelect(option);
     }
 
     // Toggle function shared by handlers
