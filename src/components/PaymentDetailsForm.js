@@ -47,7 +47,6 @@ function PaymentDetailsForm() {
     // field validation
     const validateName = () => {
         if (enteredName.trim() === '') {
-            console.log('No! name');
             return false;
         }
         return true;
@@ -55,7 +54,6 @@ function PaymentDetailsForm() {
 
     const validateEmail = () => {
         if (enteredEmail.trim() === '') {
-            console.log('No! email');
             return false;
         }
         return true;
@@ -63,7 +61,6 @@ function PaymentDetailsForm() {
 
     const validateCardNum = () => {
         if (enteredCardNum.trim() === '' || !/^[0-9]{15,19}$/.test(enteredCardNum)) {
-            console.log('No! card');
             return false;
         }
         return true;
@@ -71,7 +68,6 @@ function PaymentDetailsForm() {
 
     const validateDate = () => {
         if (enteredDate.trim() === '' || !/^[0-9]{2}\/[0-9]{2}$/.test(enteredDate)) {
-            console.log('No! date');
             return false;
         }
         return true;
@@ -79,7 +75,6 @@ function PaymentDetailsForm() {
 
     const validateCvv = () => {
         if (enteredCvv.trim() === '' || !/^[0-9]{3,4}$/.test(enteredCvv)) {
-            console.log('No! security');
             return false;
         }
         return true;
@@ -90,10 +85,8 @@ function PaymentDetailsForm() {
         if (validateName() && validateEmail() && validateCardNum() && validateDate() && validateCvv()) {
             return true;
         }
-        console.log('No! submit');
-        return false;
         
-
+        return false;
     }
 
     // On submit validate and move to confirmation screen
