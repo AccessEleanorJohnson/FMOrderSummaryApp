@@ -1,12 +1,25 @@
+import { useState } from 'react';
 import OrderSummaryPlanSelect from './OrderSummaryPlanSelect';
+import PrimaryButton from './elements/PrimaryButton';
 
-function OrderSummaryForm() {
+function OrderSummaryForm(props) {
+
+    const [plan, setPlan] = useState(0);
+
+    const selectHandler = (plan) => {
+        console.log(plan);
+        setPlan(plan);
+    }
+
+    const clickHandler = (e) => {
+        e.preventDefault();
+        props.onConfirm(plan);
+    }
 
     return (
-        <form className='pb-6 flex flex-col'>
-            <OrderSummaryPlanSelect />
-            <button className='block my-5 py-4 text-white font-bold bg-bright-blue hover:bg-bright-blue/80 rounded-xl shadow-xl shadow-bright-blue/20 focus:outline focus:outline-red-500 focus:outline-2'>Proceed to Payment</button>
-            <a className='p-2 text-desaturated-blue hover:text-black text-sm font-bold hover:underline' href='#'>Cancel Order</a>
+        <form className='flex flex-col'>
+            <OrderSummaryPlanSelect onPlanSelect={selectHandler} planOptions={props.planOptions} />
+            <PrimaryButton type='submit' onClick={clickHandler} >Proceed to Payment</PrimaryButton>
         </form>
     );
 }
